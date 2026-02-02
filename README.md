@@ -6,7 +6,7 @@ A comprehensive security architecture and implementation plan for a multi-site n
 ## Project Overview
 [cite_start]This project outlines a strategic security overhaul for a merger between a financial services firm and a medical software provider[cite: 291, 328, 477]. [cite_start]The design unifies disparate infrastructures into a hardened **Hybrid-Cloud environment** while adhering to a **$50,000 first-year budget**[cite: 388, 574].
 
-![Network Topology](Proposed-Merged-Network-Topology.pdf)
+![Network Topology](Proposed-Merged-Network-Topology.png)
 
 ### **Cost-Benefit Analysis & Financial Strategy**
 | Category | Strategy | Rationale & Budgetary Impact |
