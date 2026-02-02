@@ -33,10 +33,30 @@ Prior to integration, the following critical risks were identified and mitigated
 
 ---
 
-## Technical Specifications (OSI/TCP-IP Mapping)
-| Component Type | OSI Layer | TCP/IP Layer |
+## Technical Specifications: OSI & TCP/IP Layer Mapping
+
+To ensure the security architecture is technically sound, each infrastructure component has been mapped to its respective layer in the OSI and TCP/IP models.
+
+| Component Type | OSI Layer(s) | TCP/IP Layer(s) |
 | :--- | :--- | :--- |
-| **Cloud-Based NGFW** | Layers 3 – 7 | Layers 3 – 4 |
-| **VLAN Segmentation** | Layer 2 | Layer 2 |
-| **Centralized IAM / MFA**| Layer 7 | Layer 4 |
-| **Endpoint Detection (EDR)**| Layers 3 – 7 | Layers 3 – 4 |
+| **Cloud-Based Next-Generation Firewall (NGFW)** | Layers 3 (Network) - 7 (Application) | Layers 3 (Internet) - 4 (Application) |
+| **On-Premises Firewalls (Repurposed)** | Layers 3 (Network) - 7 (Application) | Layers 3 (Internet) - 4 (Application) |
+| **VLANs (Logical Segmentation)** | Layer 2 (Data Link) | Layer 2 (Link) |
+| **Micro-segmentation (Cloud NSGs/Security Groups)** | Layers 3 (Network) - 4 (Transport) | Layers 3 (Internet) - 4 (Transport) |
+| **Centralized IAM System** | Layer 7 (Application) | Layer 4 (Application) |
+| **Endpoint Detection and Response (EDR)** | Layers 3 (Network) - 7 (Application) | Layers 3 (Internet) - 4 (Application) |
+| **Mobile Device Management (MDM)** | Layer 7 (Application) | Layer 4 (Application) |
+| **Cloud-Based SIEM / Analytics Tools** | Layer 7 (Application) | Layer 4 (Application) |
+| **Core Switching (Cisco/HPE/Aruba)** | Layer 2 (Data Link) | Layer 2 (Link) |
+| **Wireless Access Points (Meraki/Aruba)** | Layers 1 (Physical) - 3 (Network) | Layers 1 (Link) - 3 (Internet) |
+| **Servers** | Layers 1 (Physical) - 7 (Application) | Layers 1 (Link) - 4 (Application) |
+| **Internet Connection (Physical Media)** | Layer 1 (Physical) | Layer 1 (Link) |
+
+
+
+---
+
+## Project Strategy & Compliance
+* **Budgetary Constraint:** Successfully integrated all components within a **$50,000 first-year budget**.
+* **Remediation:** Addressed critical RCE vulnerabilities (dRuby, Java RMI, Ghostcat) identified in pre-merger audits.
+* **Compliance Frameworks:** Aligned architecture with **PCI DSS** (Cardholder Data) and **HIPAA** (ePHI) requirements via strict segmentation.
